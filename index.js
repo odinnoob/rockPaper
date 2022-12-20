@@ -59,6 +59,9 @@ function round1 (x, y){
 function game (x,y){
     for (let i = 0; i < 5; i++){
         playerPlay = prompt("Rock, Paper or Scissors?");
+        playerPlay = playerPlay.toLowerCase().split('');
+        playerPlay[0] = playerPlay[0].toUpperCase();
+        playerPlay = playerPlay.join('');
         computerMove = computerPlay();
         round1(playerPlay, computerMove);
     }
